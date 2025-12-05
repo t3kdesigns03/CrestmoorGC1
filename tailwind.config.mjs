@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}',
-    './public/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}',
-  ],
+  content: ['./src/**/*.*', './public/**/*.*'],
   theme: {
     extend: {
       colors: {
@@ -18,7 +15,7 @@ export default {
           700: '#2d5f2d',
           800: '#234f23',
           900: '#1a3d1a',
-          950: '#0f280f',   // This is the exact line that fixes bg-pine-950
+          950: '#0f280f',
         },
         gold: '#b89f6b',
       },
