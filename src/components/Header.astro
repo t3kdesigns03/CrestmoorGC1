@@ -1,0 +1,44 @@
+---
+const navItems = [
+  { name: 'Home', href: '#home' },
+  { name: 'Clubhouse', href: '#clubhouse' },
+  { name: 'Events', href: '#events' },
+  { name: 'Scorecard', href: '#scorecard' },
+  { name: 'Tee Times', href: '#tee-times' },
+  { name: 'Contact', href: '#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-pine-950/95 backdrop-blur-md border-b border-pine-800">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-3xl font-serif text-gold">Crestmoor</a>
+      
+      <nav class="hidden md:flex space-x-10">
+        {navItems.map(item => (
+          <a href={item.href} class="text-pine-100 hover:text-gold transition text-lg">{item.name}</a>
+        ))}
+      </nav>
+
+      <button id="mobile-menu-btn" class="md:hidden text-pine-100">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-pine-900 border-t border-pine-800">
+    <nav class="flex flex-col py-4 px-6">
+      {navItems.map(item => (
+        <a href={item.href} class="py-4 text-lg text-pine-100 hover:text-gold transition border-b border-pine-800 last:border-0">{item.name}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>
