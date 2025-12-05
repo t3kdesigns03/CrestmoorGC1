@@ -1,34 +1,112 @@
-<!-- Clubhouse -->
-<section id="clubhouse" class="py-32 bg-pine-900">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-7xl md:text-8xl font-serif text-gold text-center mb-20">The Clubhouse</h2>
-    
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <!-- Image first on mobile, left on desktop -->
-      <div class="order-1 md:order-2">
-        <div class="overflow-hidden rounded-2xl shadow-2xl group cursor-pointer">
-          <img 
-            src="/images/interior.jpg" 
-            alt="Crestmoor Clubhouse Interior" 
-            class="w-full object-cover group-hover:scale-105 transition duration-1000 ease-out" 
-          />
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crestmoor Golf Club</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body class="pt-24">
+    <Header />
+
+    <!-- Hero -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center -mt-24">
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/clubhouse-hero.jpg');"></div>
+      
+      <div class="relative z-20 px-6">
+        <h1 class="text-7xl md:text-9xl font-serif text-gold mb-4 drop-shadow-2xl">Crestmoor</h1>
+        <p class="text-4xl md:text-6xl text-pine-100 mb-6 drop-shadow-xl">Golf Club</p>
+        <p class="text-xl md:text-2xl text-pine-200 max-w-2xl mx-auto">Established 1923 • A timeless treasure in the heart of the Carolinas</p>
+      </div>
+    </section>
+
+    <!-- Clubhouse -->
+    <section id="clubhouse" class="py-32 bg-pine-900">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8 text-lg">
+          <h2 class="text-6xl font-serif text-gold mb-8">The Clubhouse</h2>
+          <p>Step into history. Our classic 1920s clubhouse blends old-world charm with every modern comfort.</p>
+          <p>Panoramic course views, exceptional dining, full bar, pro shop, locker rooms, and event spaces that make every occasion unforgettable.</p>
+          <p>Perfect for weddings, tournaments, corporate outings, or simply unwinding after your round.</p>
+        </div>
+        <div>
+          <img src="/images/clubhouse-interior.jpg" alt="Clubhouse Interior" class="rounded-xl shadow-2xl w-full" />
         </div>
       </div>
+    </section>
 
-      <!-- Text -->
-      <div class="order-2 md:order-1 space-y-8 text-lg text-pine-100">
-        <p>Step into history. Built in the 1920s, our clubhouse is the heart and soul of Crestmoor.</p>
-        <p>Rich wood paneling, fireplace gatherings, panoramic course views, exceptional dining, a full bar stocked with rare finds, pro shop, locker rooms, and event spaces that make every visit unforgettable.</p>
-        <p>Whether you're here for a wedding, tournament, corporate event, or just a post-round bourbon by the fire — this is where memories are made.</p>
+    <!-- Events -->
+    <section id="events" class="py-32 bg-pine-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-6xl font-serif text-gold text-center mb-16">Events & Calendar</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="bg-pine-900 rounded-xl p-8 shadow-2xl hover:shadow-gold/20 transition">
+            <h3 class="text-3xl font-serif text-gold mb-3">Member-Guest</h3>
+            <p class="text-pine-300 mb-4">July 18–20, 2025</p>
+            <p>Our biggest event of the year. Spots filling fast.</p>
+          </div>
+          <div class="bg-pine-900 rounded-xl p-8 shadow-2xl hover:shadow-gold/20 transition">
+            <h3 class="text-3xl font-serif text-gold mb-3">Club Championship</h3>
+            <p class="text-pine-300 mb-4">August 23–24, 2025</p>
+            <p>Gross & net flights. Defend your title.</p>
+          </div>
+          <div class="bg-pine-900 rounded-xl p-8 shadow-2xl hover:shadow-gold/20 transition">
+            <h3 class="text-3xl font-serif text-gold mb-3">Couples Twilight</h3>
+            <p class="text-pine-300 mb-4">Every Friday • May–September</p>
+            <p>9-hole scramble + dinner. $90/couple.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Optional: if you add more clubhouse photos later (dining, bar, etc.), drop them here in a mini-gallery
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-      <img src="/images/dining.jpg" class="rounded-xl shadow-xl hover:scale-105 transition" />
-      <img src="/images/bar.jpg" class="rounded-xl shadow-xl hover:scale-105 transition" />
-      <-- add more -->
-    </div>
-    -->
-  </div>
-</section>
+    <!-- Scorecard -->
+    <section id="scorecard" class="py-32 bg-pine-900">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-6xl font-serif text-gold mb-16">Scorecard</h2>
+        <img src="/images/scorecard.png" alt="Crestmoor Scorecard" class="mx-auto rounded-xl shadow-2xl max-w-full md:max-w-5xl" />
+        <div class="mt-10">
+          <a href="/images/scorecard.pdf" class="inline-block bg-gold text-pine-950 px-10 py-5 rounded-lg font-bold text-xl hover:bg-pine-300 transition">Download Printable PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tee Times -->
+    <section id="tee-times" class="py-32 bg-pine-950">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-6xl font-serif text-gold mb-12">Book Tee Times</h2>
+        <p class="text-2xl text-pine-200 mb-12">Public welcome • Book instantly online</p>
+        <a href="https://www.golfnow.com/tee-times/facility/XXXX-crestmoor-golf-club/search" target="_blank" class="inline-block bg-gold text-pine-950 px-16 py-7 rounded-lg font-bold text-2xl hover:bg-pine-300 transition shadow-2xl">
+          Book Now on GolfNow
+        </a>
+        <p class="mt-8 text-pine-300">Or call the pro shop: (555) 123-4567</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 bg-pine-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-6xl font-serif text-gold text-center mb-16">Visit Us</h2>
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="space-y-6 text-lg">
+            <p>Crestmoor Golf Club<br>123 Golf Lane<br>Some City, ST 12345</p>
+            <p>Pro Shop: (555) 123-4567<br>Email: info@crestmoorgc.com</p>
+            <p class="pt-6">Open daily 7:00 AM – dusk<br>(weather permitting)</p>
+          </div>
+          <div class="bg-pine-950/50 rounded-xl p-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-81.123!3d35.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDI3JzIxLjIgTiA4McKwMDcnMjkuOCJX!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-xl"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
