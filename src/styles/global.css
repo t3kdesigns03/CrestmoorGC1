@@ -2,11 +2,13 @@
 
 @layer base {
   body {
-    background-color: #0f280f; /* pine-950 hardcoded — build cannot possibly fail now */
-    @apply text-pine-50 font-sans antialiased;
+    background-color: #0f280f;   /* pine-950 */
+    color: #f5f8f5;              /* pine-50 */
+    @apply font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-gold;
+    @apply font-serif;
+    color: #b89f6b;              /* gold */
   }
 }
 
@@ -15,5 +17,6 @@ html {
 }
 
 ::selection {
-  @apply bg-gold text-pine-950;
+  background-color: #b89f6b;     /* gold */
+  color: #0f280f;                /* pine-950 */
 }
